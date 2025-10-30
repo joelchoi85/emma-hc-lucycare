@@ -2,7 +2,7 @@
 
 ## 배포 URL
 
-- 프론트엔드: https://\*\*\*.vercel.app
+- 프론트엔드: https://emma-hc-lucycare.vercel.app
 
 ## 기술 스택
 
