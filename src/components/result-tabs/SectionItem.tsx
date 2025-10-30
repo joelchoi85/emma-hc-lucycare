@@ -1,22 +1,18 @@
+import { STATUS_CLASS, STATUS_TEXT } from "../../constants/emotions";
 import { cn } from "../../utils/default";
 
 interface SectionItemProps {
   name: string;
   status?: number;
   description?: string;
+  className?: string;
   children?: React.ReactNode;
 }
-const statusText = ["양호", "주의", "경고", "위험"];
-const statusClass = [
-  "text-green-500",
-  "text-[#FFCC00]",
-  "text-orange-500",
-  "text-rose-600",
-];
 const SectionItem: React.FC<SectionItemProps> = ({
   name,
   status,
   description,
+  className,
   children,
 }) => {
   return (
@@ -24,15 +20,21 @@ const SectionItem: React.FC<SectionItemProps> = ({
       className={cn(
         "relative",
         "flex flex-col",
-        "rounded-4xl border border-[#6B6B6B] py-6 px-12"
+        "rounded-4xl border border-[#6B6B6B] py-6 px-12",
+        className
       )}
     >
       <div className="flex gap-12 items-center">
-        <div className="text-[50px] font-bold text-start">
+        <div
+          className={cn(
+            className?.includes("text") ? "" : "text-[50px]",
+            "font-bold text-start"
+          )}
+        >
           {name}
           {typeof status !== "undefined" && (
-            <span className={cn("pl-6", statusClass[status])}>
-              {statusText[status]}
+            <span className={cn("pl-6", STATUS_CLASS[status])}>
+              {STATUS_TEXT[status]}
             </span>
           )}
         </div>

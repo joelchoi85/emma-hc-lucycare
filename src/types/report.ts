@@ -1,3 +1,12 @@
+export type Emotion =
+  | "Angry"
+  | "Disgusted"
+  | "Fearful"
+  | "Happy"
+  | "Neutral"
+  | "Sad"
+  | "Surprised";
+
 /**
  * 감정 분석 결과 세부 확률
  */
@@ -34,12 +43,12 @@ interface DepressionScore {
 /**
  * AI 감정 분석
  */
-interface EmotionRow {
+export interface EmotionRow {
   aiAnalysis: {
-    emotion: string;
+    emotion: Emotion;
     percentage: number;
   };
-  myEmotion: string;
+  myEmotion: Emotion;
 }
 
 /**
@@ -62,7 +71,7 @@ interface EmpathyData {
  * 모방 매치 점수 데이터
  */
 interface MimicMatchScore extends EmpathyScore {
-  emotion: string; // 해당 감정
+  emotion: Emotion; // 해당 감정
 }
 
 /**
@@ -75,9 +84,9 @@ interface MimicData {
 /**
  * 인식 테스트 결과
  */
-interface RecognitionRow {
-  proposedEmotion: string; // 제시된 감정
-  myEmotion: string; // 사용자가 인식한 감정
+export interface RecognitionRow {
+  proposedEmotion: Emotion; // 제시된 감정
+  myEmotion: Emotion; // 사용자가 인식한 감정
 }
 
 /**
@@ -94,9 +103,9 @@ interface RecognitionData {
  * 복제 테스트 결과
  */
 interface ReplicationRow {
-  proposedEmotion: string; // 제시된 감정
+  proposedEmotion: Emotion; // 제시된 감정
   aiAnalysis: {
-    emotion: string;
+    emotion: Emotion;
     previous: number; // 이전 확률
     current: number; // 현재 확률
   };

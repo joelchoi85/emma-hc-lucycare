@@ -127,9 +127,13 @@ const BasicResult: React.FC = () => {
             <DepressedPieChart score={data.depressionScore.current} />
           )}
           <div className="col-span-2 flex flex-col gap-10 max-w-[931px]">
-            <SectionItem name="결과" status={0}></SectionItem>
+            <SectionItem
+              name="결과"
+              status={0}
+              className="m-0! py-4! px-6 rounded-2xl text-[34px]!"
+            ></SectionItem>
             <DescriptionDiv
-              textClass="pl-10 text-[30px] text-start font-bold"
+              textClass="pl-8 text-[30px] text-start font-bold"
               description={`가벼운 수준의 우울감이 나타나고 있습니다. 
 일시적인 감정 기복일 수 있으나, 증상이 악화되지 않도록 적극적인 관심과 관리가 필요합니다.
 

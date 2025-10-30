@@ -12,15 +12,7 @@ import wearyFace from "../../assets/images/weary_face.png";
 import wearyFace2x from "../../assets/images/weary_face_2x.png";
 import neutralFace from "../../assets/images/neutral_face.png";
 import neutralFace2x from "../../assets/images/neutral_face_2x.png";
-
-type Emotion =
-  | "Sad"
-  | "Neutral"
-  | "Happy"
-  | "Angry"
-  | "Disgusted"
-  | "Fearful"
-  | "Surprised";
+import type { Emotion } from "../../types/report";
 
 interface FaceIconProps {
   emotion: Emotion;

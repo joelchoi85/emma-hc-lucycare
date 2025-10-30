@@ -1,10 +1,6 @@
-import type { EmotionResult } from "../../types/report";
+import type { Emotion, EmotionResult } from "../../types/report";
 import { Cell, Pie, PieChart, ResponsiveContainer } from "recharts";
-import {
-  EMOTION_COLORS,
-  EMOTION_LABELS,
-  type Emotion,
-} from "../../constants/emotions";
+import { EMOTION_COLORS, EMOTION_LABELS } from "../../constants/emotions";
 import FaceIcon from "../icons/FaceIcon";
 
 interface EmotionPieChartProps {

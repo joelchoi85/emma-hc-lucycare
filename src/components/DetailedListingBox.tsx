@@ -1,4 +1,4 @@
-import { cn } from "../../utils/default";
+import { cn } from "../utils/default";
 
 interface ListingBoxLayoutProps {
   isColored?: boolean;
@@ -14,10 +14,14 @@ const ListingBoxLayout: React.FC<ListingBoxLayoutProps> = ({
 }) => {
   return (
     <div
-      className={cn(isColored && "bg-[#DDE9FF]", "rounded-[20px]", className)}
+      className={cn(
+        isColored ? "bg-[#DDE9FF]" : "border-2 border-[#DDE9FF]",
+        "rounded-[20px]",
+        className
+      )}
     >
-      <div className="font-bold text-[50px]">{title}</div>
-      <hr className="border-3 border-[#99C0FF]" />
+      <div className="p-8 pb-6 font-bold text-[50px]">{title}</div>
+      <hr className="border-2 border-[#99C0FF]" />
       {children}
     </div>
   );
