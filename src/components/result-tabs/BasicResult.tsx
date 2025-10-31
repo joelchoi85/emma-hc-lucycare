@@ -9,12 +9,16 @@ import HRVWithIcon from "../HRVWithIcon";
 import StressGaugeBar from "../charts/StressGaugeBar";
 import EmotionPieChart from "../charts/EmotionPieChart";
 import DepressedPieChart from "../charts/DepressedPieChart";
+import { toast } from "react-toastify";
 
 const BasicResult: React.FC = () => {
   const { data, isLoading, isError } = fetchReport();
   useEffect(() => {
     if (!isLoading && !data && isError) {
-      console.log("error");
+      toast.error("데이터를 불러오는 중 오류가 발생했습니다.", {
+        position: "top-right",
+        autoClose: 4000,
+      });
     }
   });
   return (

@@ -7,12 +7,16 @@ import AIEmotionAnalysisListingBox from "../AIEmotionAnalysisListingBox";
 import { DUMMY_TEXT } from "../../constants/dummy";
 import RecognitionSpeedComposedChart from "../charts/RecognitionSpeedComposedChart";
 import { EMOTION_TEXT } from "../../constants/emotions";
+import { toast } from "react-toastify";
 
 const DetailedResult: React.FC = () => {
   const { data, isLoading, isError } = fetchReport();
   useEffect(() => {
     if (!isLoading && !data && isError) {
-      console.log("error");
+      toast.error("데이터를 불러오는 중 오류가 발생했습니다.", {
+        position: "top-right",
+        autoClose: 4000,
+      });
     }
   });
   return (

@@ -63,6 +63,9 @@ const EmotionPieChart: React.FC<EmotionPieChartProps> = ({ emotions }) => {
 
       {/* 범례 */}
       <div className="flex flex-col gap-3">
+        <div className="text-[35px] font-bold">
+          주요 감정: {chartData[0].label}
+        </div>
         {chartData.map((item) => (
           <div key={item.name} className="flex items-center gap-8">
             <div
