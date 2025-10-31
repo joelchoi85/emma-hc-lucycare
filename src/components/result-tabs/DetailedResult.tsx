@@ -16,7 +16,7 @@ const DetailedResult: React.FC = () => {
     }
   });
   return (
-    <div className="flex flex-col gap-6 p-3">
+    <div className="font-pretendard flex flex-col gap-6 p-3">
       {/* 표정 공감하기 섹션 */}
       <section className="flex flex-col p-[30px] space-y-8">
         <DecoratedTitle title="표정 공감하기" />
@@ -129,7 +129,7 @@ const DetailedResult: React.FC = () => {
               />
             </div>
             <DetailedListingBox
-              className="w-[365px] pb-5 h-full"
+              className="items-stretch w-[365px] pb-5"
               title="정확도"
               isColored
             >
@@ -167,7 +167,10 @@ const DetailedResult: React.FC = () => {
                 </div>
               </div>
             </DetailedListingBox>
-            <DetailedListingBox className="h-full flex-1" title="반응 속도">
+            <DetailedListingBox
+              className="items-stretch flex-1"
+              title="반응 속도"
+            >
               <RecognitionSpeedComposedChart
                 responseTime={data.detailed.recognition.responseTime}
               />

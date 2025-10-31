@@ -26,9 +26,9 @@ export interface EmotionResult {
 export interface RPPGData {
   hr: string; // 심박수 (예: "72 bpm")
   hrValues: number[]; // 심박수 값 배열
-  hrv: string; // 심박 변이도 (예: "45 ms")
+  hrv: string; // 심박 변이 (예: "45 ms")
   emotion: string; // 가장 높은 확률의 감정
-  stress: "Low" | "Medium" | "High" | "Danger"; // 스트레스 수준 (예: "Low", "Medium")
+  stress: "Low" | "Medium" | "High" | "Danger";
   emotionResult: EmotionResult; // 감정 분석 세부 결과
 }
 
