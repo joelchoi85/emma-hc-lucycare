@@ -30,6 +30,7 @@ npm install
 npm run dev
 
 ## 프로젝트 구조
+```zsh
 src/
 ├── assets/
 │   ├── css/
@@ -104,7 +105,7 @@ src/
 ├── App.tsx
 ├── index.css
 └── main.tsx
-
+```
 ## 주요 기능
 
 ### 데이터 시각화
